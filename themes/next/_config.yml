@@ -51,7 +51,7 @@ menu:
   php: /categories/PHP/
   linux: /categories/Linux/
   mysql: /categories/Mysql/
-  mac: /categories/Mac/
+#  mac: /categories/Mac/
 #  groceries: /categories/groceries/
   live: /categories/live/
   about: /about/
@@ -329,7 +329,7 @@ han: false
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: c9647e61a37ba2b290cfcd3abb38be49
 
 # Duoshuo ShortName
 #duoshuo_shortname:
@@ -454,9 +454,9 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  enable: true
+  app_id: iWaXRtDlqafkqM6L8ASXHIOi-gzGzoHsz
+  app_key: 67sjj4S0FbYoBrqAHLf7JoFz
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/

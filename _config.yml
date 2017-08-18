@@ -5,7 +5,7 @@
 # Site
 title: Melody
 subtitle:
-description:
+description: 背上的伤痕是剑士的耻辱！
 author: Melody
 language: zh-Hans
 timezone:
@@ -80,3 +80,10 @@ deploy:
   type: git
   repo: git@github.com:daihuanqi/daihuanqi.github.io.git
   branch: master
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:

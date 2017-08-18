@@ -7,7 +7,7 @@ title:
 author: 博主
 
 menu:
-  home: Home
+  home: 主页
   archives: 归档
   categories: 分类
   tags: 标签
@@ -19,7 +19,7 @@ menu:
   linux: Linux命令
   mac: Mac技巧
   mysql: Mysql优化
-  php: 深入PHP
+  php: PHP
   groceries: Groceries大杂货
   live: Live随笔
 
