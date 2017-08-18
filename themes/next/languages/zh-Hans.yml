@@ -7,7 +7,7 @@ title:
 author: 博主
 
 menu:
-  home: 首页
+  home: Home
   archives: 归档
   categories: 分类
   tags: 标签
@@ -16,6 +16,14 @@ menu:
   schedule: 日程表
   sitemap: 站点地图
   commonweal: 公益404
+  linux: Linux命令
+  mac: Mac技巧
+  mysql: Mysql优化
+  php: 深入PHP
+  groceries: Groceries大杂货
+  live: Live随笔
+
+
 
 sidebar:
   overview: 站点概览
