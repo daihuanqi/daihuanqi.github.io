@@ -14,7 +14,7 @@ keywords: "Hexo, NexT"
 rss:
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2017
 
 # icon between year and author @Footer
 authoricon: heart
@@ -102,8 +102,11 @@ scheme: Mist
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
-  #LinkLabel: Link
+social:
+    GitHub: https://github.com/daihuanqi
+    微博: http://weibo.com/u/1933849790
+#    知乎: https://www.zhihu.com/people/dai-huan-qi
+    Twitter: https://twitter.com/Melody_daidai
 
 # Social Links Icons
 # Icon Mapping:
@@ -127,13 +130,16 @@ social_icons:
   Instagram: instagram
   StackOverflow: stack-overflow
   Weibo: weibo
+  微博: weibo
 
 # Blog rolls
-#links_title: Links
+links_title: 可以瞅瞅
 #links_layout: block
-#links_layout: inline
-#links:
-  #Title: http://example.com/
+links_layout: inline
+links:
+  Laravel China: https://laravel-china.org
+  PSR: https://psr.phphub.org
+  PHP之道: https://laravel-china.github.io/php-the-right-way
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
@@ -227,9 +233,9 @@ post_wordcount:
   #description: ex. subscribe to my blog by scanning my public wechat account
 
 # Reward
-#reward_comment: Donate comment here
-#wechatpay: /images/wechatpay.jpg
-#alipay: /images/alipay.jpg
+reward_comment: 捧个场？
+wechatpay: /weixin.jpg
+alipay: /alipay.jpg
 #bitcoin: /images/bitcoin.png
 
 # Declare license on posts
@@ -367,7 +373,7 @@ valine:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-#livere_uid: your uid
+livere_uid: MTAyMC8zMDI2OC82ODIz
 
 # Baidu Share
 # Available value:
@@ -380,8 +386,8 @@ valine:
 # This plugin is more useful in China, make sure you known how to use it.
 # And you can find the use guide at official webiste: http://www.jiathis.com/.
 # Warning: JiaThis does not support https.
-#jiathis:
-  ##uid: Get this uid from http://www.jiathis.com/
+jiathis: true
+#    uid: 2141934
 #add_this_id:
 
 # Share
@@ -462,7 +468,7 @@ leancloud_visitors:
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
   # count values only if the other configs are false
-  enable: false
+  enable: true
   # custom uv span for the whole site
   site_uv: true
   site_uv_header: <i class="fa fa-user"></i>
@@ -472,7 +478,7 @@ busuanzi_count:
   site_pv_header: <i class="fa fa-eye"></i>
   site_pv_footer:
   # custom pv span for one page only
-  page_pv: true
+  page_pv: false
   page_pv_header: <i class="fa fa-file-o"></i>
   page_pv_footer:
 
