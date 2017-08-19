@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Melody</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://daihuanqi.github.io/"/>
+  <updated>2017-08-19T01:17:45.000Z</updated>
+  <id>https://daihuanqi.github.io/</id>
+  
+  <author>
+    <name>Melody</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Netstat 简介</title>
+    <link href="https://daihuanqi.github.io/2017/08/16/netstat/"/>
+    <id>https://daihuanqi.github.io/2017/08/16/netstat/</id>
+    <published>2017-08-16T06:38:20.000Z</published>
+    <updated>2017-08-19T01:17:45.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Netstat 是一款命令行工具，可用于列出系统上所有的网络套接字连接情况，包括 tcp, udp 以及 unix 套接字，另外它还能列出处于监听状态（即等待接入请求）的套接字。如果你想确认系统上的 Web 服务有没有起来，你可以查看80端口有没有打开。以上功能使 netstat 成为网管和系统管理员的必备利器。在这篇教程中，我会列出几个例子，教大家如何使用 netstat 去查找网络连接信息和系统开启的端口号。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://daihuanqi.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="https://daihuanqi.github.io/tags/Linux/"/>
+    
+      <category term="Netstat" scheme="https://daihuanqi.github.io/tags/Netstat/"/>
+    
+      <category term="Network" scheme="https://daihuanqi.github.io/tags/Network/"/>
+    
+      <category term="监控" scheme="https://daihuanqi.github.io/tags/%E7%9B%91%E6%8E%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://daihuanqi.github.io/2017/08/15/hello-world/"/>
+    <id>https://daihuanqi.github.io/2017/08/15/hello-world/</id>
+    <published>2017-08-15T06:38:20.000Z</published>
+    <updated>2017-08-19T01:17:45.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Mysql" scheme="https://daihuanqi.github.io/categories/Mysql/"/>
+    
+    
+  </entry>
+  
+</feed>
