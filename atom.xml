@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://daihuanqi.github.io/"/>
-  <updated>2017-08-19T03:17:15.000Z</updated>
+  <updated>2017-08-19T03:43:05.000Z</updated>
   <id>https://daihuanqi.github.io/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于PHP错误日志踩过的一些坑</title>
+    <link href="https://daihuanqi.github.io/2017/08/19/%E5%85%B3%E4%BA%8EPHP%E9%94%99%E8%AF%AF%E6%97%A5%E5%BF%97%E8%B8%A9%E8%BF%87%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/"/>
+    <id>https://daihuanqi.github.io/2017/08/19/关于PHP错误日志踩过的一些坑/</id>
+    <published>2017-08-19T03:41:04.000Z</published>
+    <updated>2017-08-19T03:43:05.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;对于线上的项目来说，错误日志和访问日志是至关重要的。学会如何分析日志找出问题是一个必备技能。本文就谈谈关于PHP的错误日志那些事。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="https://daihuanqi.github.io/categories/PHP/"/>
+    
+    
+      <category term="log" scheme="https://daihuanqi.github.io/tags/log/"/>
+    
+      <category term="php" scheme="https://daihuanqi.github.io/tags/php/"/>
+    
+      <category term="error" scheme="https://daihuanqi.github.io/tags/error/"/>
+    
+  </entry>
   
   <entry>
     <title>MySQL索引原理及慢查询优化</title>
