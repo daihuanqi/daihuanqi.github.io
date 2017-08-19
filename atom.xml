@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://daihuanqi.github.io/"/>
-  <updated>2017-08-19T01:17:45.000Z</updated>
+  <updated>2017-08-19T03:17:15.000Z</updated>
   <id>https://daihuanqi.github.io/</id>
   
   <author>
@@ -14,6 +14,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL索引原理及慢查询优化</title>
+    <link href="https://daihuanqi.github.io/2017/08/19/MySQL%E7%B4%A2%E5%BC%95%E5%8E%9F%E7%90%86%E5%8F%8A%E6%85%A2%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96/"/>
+    <id>https://daihuanqi.github.io/2017/08/19/MySQL索引原理及慢查询优化/</id>
+    <published>2017-08-19T02:55:18.000Z</published>
+    <updated>2017-08-19T03:17:15.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;MySQL索引原理&quot;&gt;&lt;a href=&quot;#MySQL索引原理&quot; class=&quot;headerlink&quot; title=&quot;MySQL索引原理&quot;&gt;&lt;/a&gt;MySQL索引原理&lt;/h5&gt;&lt;h6 id=&quot;索引目的&quot;&gt;&lt;a href=&quot;#索引目的&quot; class=&quot;headerlink&quot; title=&quot;索引目的&quot;&gt;&lt;/a&gt;索引目的&lt;/h6&gt;&lt;p&gt;索引的目的在于提高查询效率，可以类比字典，如果要查“mysql”这个单词，我们肯定需要定位到m字母，然后从下往下找到y字母，再找到剩下的sql。如果没有索引，那么你可能需要把所有单词看一遍才能找到你想要的，如果我想找到m开头的单词呢？或者ze开头的单词呢？是不是觉得如果没有索引，这个事情根本无法完成？&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Mysql" scheme="https://daihuanqi.github.io/categories/Mysql/"/>
+    
+    
+      <category term="Mysql" scheme="https://daihuanqi.github.io/tags/Mysql/"/>
+    
+      <category term="索引" scheme="https://daihuanqi.github.io/tags/%E7%B4%A2%E5%BC%95/"/>
+    
+      <category term="优化" scheme="https://daihuanqi.github.io/tags/%E4%BC%98%E5%8C%96/"/>
+    
+      <category term="b+tree" scheme="https://daihuanqi.github.io/tags/b-tree/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>风趣理解阻塞非阻塞与同步异步的区别</title>
+    <link href="https://daihuanqi.github.io/2017/08/19/%E9%A3%8E%E8%B6%A3%E7%90%86%E8%A7%A3%E9%98%BB%E5%A1%9E%E9%9D%9E%E9%98%BB%E5%A1%9E%E4%B8%8E%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>https://daihuanqi.github.io/2017/08/19/风趣理解阻塞非阻塞与同步异步的区别/</id>
+    <published>2017-08-19T02:48:18.000Z</published>
+    <updated>2017-08-19T02:51:56.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;老张爱喝茶，废话不说，煮开水。&lt;br&gt;出场人物：老张，水壶两把（普通水壶，简称水壶；会响的水壶，简称响水壶）。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="https://daihuanqi.github.io/categories/PHP/"/>
+    
+    
+      <category term="同步异步" scheme="https://daihuanqi.github.io/tags/%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5/"/>
+    
+      <category term="阻塞非阻塞" scheme="https://daihuanqi.github.io/tags/%E9%98%BB%E5%A1%9E%E9%9D%9E%E9%98%BB%E5%A1%9E/"/>
+    
+      <category term="I/O" scheme="https://daihuanqi.github.io/tags/I-O/"/>
+    
+  </entry>
   
   <entry>
     <title>Netstat 简介</title>

@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="同步异步,阻塞非阻塞,I/O," />
 
 
 
@@ -96,17 +96,18 @@
 
 
 
-<meta name="description" content="背上的伤痕是剑士的耻辱！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="https://daihuanqi.github.io/tags/index.html">
+<meta name="description" content="老张爱喝茶，废话不说，煮开水。出场人物：老张，水壶两把（普通水壶，简称水壶；会响的水壶，简称响水壶）。">
+<meta name="keywords" content="同步异步,阻塞非阻塞,I&#x2F;O">
+<meta property="og:type" content="article">
+<meta property="og:title" content="风趣理解阻塞非阻塞与同步异步的区别">
+<meta property="og:url" content="https://daihuanqi.github.io/2017/08/19/风趣理解阻塞非阻塞与同步异步的区别/index.html">
 <meta property="og:site_name" content="Melody">
-<meta property="og:description" content="背上的伤痕是剑士的耻辱！">
+<meta property="og:description" content="老张爱喝茶，废话不说，煮开水。出场人物：老张，水壶两把（普通水壶，简称水壶；会响的水壶，简称响水壶）。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-19T01:17:45.000Z">
+<meta property="og:updated_time" content="2017-08-19T02:51:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="背上的伤痕是剑士的耻辱！">
+<meta name="twitter:title" content="风趣理解阻塞非阻塞与同步异步的区别">
+<meta name="twitter:description" content="老张爱喝茶，废话不说，煮开水。出场人物：老张，水壶两把（普通水壶，简称水壶；会响的水壶，简称响水壶）。">
 
 
 
@@ -135,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="https://daihuanqi.github.io/tags/"/>
+  <link rel="canonical" href="https://daihuanqi.github.io/2017/08/19/风趣理解阻塞非阻塞与同步异步的区别/"/>
 
 
 
 
 
-  <title>tags | Melody</title>
+  <title>风趣理解阻塞非阻塞与同步异步的区别 | Melody</title>
   
 
 
@@ -296,40 +297,244 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://daihuanqi.github.io/2017/08/19/风趣理解阻塞非阻塞与同步异步的区别/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Melody">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/Melody.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Melody">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 11 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/I-O/" style="font-size: 12px; color: #ccc">I/O</a> <a href="/tags/Linux/" style="font-size: 12px; color: #ccc">Linux</a> <a href="/tags/Mysql/" style="font-size: 12px; color: #ccc">Mysql</a> <a href="/tags/Netstat/" style="font-size: 12px; color: #ccc">Netstat</a> <a href="/tags/Network/" style="font-size: 12px; color: #ccc">Network</a> <a href="/tags/b-tree/" style="font-size: 12px; color: #ccc">b+tree</a> <a href="/tags/优化/" style="font-size: 12px; color: #ccc">优化</a> <a href="/tags/同步异步/" style="font-size: 12px; color: #ccc">同步异步</a> <a href="/tags/监控/" style="font-size: 12px; color: #ccc">监控</a> <a href="/tags/索引/" style="font-size: 12px; color: #ccc">索引</a> <a href="/tags/阻塞非阻塞/" style="font-size: 12px; color: #ccc">阻塞非阻塞</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">风趣理解阻塞非阻塞与同步异步的区别</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-19T10:48:18+08:00">
+                2017-08-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/PHP/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/08/19/风趣理解阻塞非阻塞与同步异步的区别/" class="leancloud_visitors" data-flag-title="风趣理解阻塞非阻塞与同步异步的区别">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>老张爱喝茶，废话不说，煮开水。<br>出场人物：老张，水壶两把（普通水壶，简称水壶；会响的水壶，简称响水壶）。<br><a id="more"></a><br>1 老张把水壶放到火上，立等水开。（同步阻塞）老张觉得自己有点傻</p>
+<p>2 老张把水壶放到火上，去客厅看电视，时不时去厨房看看水开没有。（同步非阻塞）</p>
+<p>老张还是觉得自己有点傻，于是变高端了，买了把会响笛的那种水壶。水开之后，能大声发出嘀~~~~的噪音。</p>
+<p>3 老张把响水壶放到火上，立等水开。（异步阻塞）老张觉得这样傻等意义不大</p>
+<p>4 老张把响水壶放到火上，去客厅看电视，水壶响之前不再去看它了，响了再去拿壶。（异步非阻塞）</p>
+<p>老张觉得自己聪明了。</p>
+<p><strong>所谓同步异步，只是对于水壶而言</strong>。普通水壶，同步；响水壶，异步。虽然都能干活，但响水壶可以在自己完工之后，提示老张水开了。这是普通水壶所不能及的。同步只能让调用者去轮询自己（情况2中），造成老张效率的低下。</p>
+<p><strong>所谓阻塞非阻塞，仅仅对于老张而言</strong>。立等的老张，阻塞；看电视的老张，非阻塞。情况1和情况3中老张就是阻塞的，媳妇喊他都不知道。虽然3中响水壶是异步的，可对于立等的老张没有太大的意义。所以一般异步是配合非阻塞使用的，这样才能发挥异步的效用。——来源网络，作者不明。</p>
+<p>作者：愚抄<br>链接：<a href="https://www.zhihu.com/question/19732473/answer/23434554" target="_blank" rel="external">https://www.zhihu.com/question/19732473/answer/23434554</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>捧个场？</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/weixin.jpg" alt="Melody WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/alipay.jpg" alt="Melody Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/同步异步/" rel="tag"># 同步异步</a>
+          
+            <a href="/tags/阻塞非阻塞/" rel="tag"># 阻塞非阻塞</a>
+          
+            <a href="/tags/I-O/" rel="tag"># I/O</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/16/netstat/" rel="next" title="Netstat 简介">
+                <i class="fa fa-chevron-left"></i> Netstat 简介
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/19/MySQL索引原理及慢查询优化/" rel="prev" title="MySQL索引原理及慢查询优化">
+                MySQL索引原理及慢查询优化 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<a class="jiathis_button_weixin"></a>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_douban"></a>
+<a class="jiathis_button_share"></a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
   </div>
 
 
@@ -634,10 +839,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
