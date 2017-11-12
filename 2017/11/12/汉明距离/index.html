@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="位运算,二进制,算法,算法题," />
 
 
 
@@ -96,16 +96,18 @@
 
 
 
-<meta name="description" content="背上的伤痕是剑士的耻辱！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Melody">
-<meta property="og:url" content="https://daihuanqi.github.io/tags/php/index.html">
+<meta name="description" content="今天看到了一道算法题，叫汉明距离（音译吧）。一开始我是懵逼的，后来复习了一下计算机的一些基础之后就做出来了，我觉得有必要记录一下。">
+<meta name="keywords" content="位运算,二进制,算法,算法题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="汉明距离">
+<meta property="og:url" content="https://daihuanqi.github.io/2017/11/12/汉明距离/index.html">
 <meta property="og:site_name" content="Melody">
-<meta property="og:description" content="背上的伤痕是剑士的耻辱！">
+<meta property="og:description" content="今天看到了一道算法题，叫汉明距离（音译吧）。一开始我是懵逼的，后来复习了一下计算机的一些基础之后就做出来了，我觉得有必要记录一下。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-12T08:49:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Melody">
-<meta name="twitter:description" content="背上的伤痕是剑士的耻辱！">
+<meta name="twitter:title" content="汉明距离">
+<meta name="twitter:description" content="今天看到了一道算法题，叫汉明距离（音译吧）。一开始我是懵逼的，后来复习了一下计算机的一些基础之后就做出来了，我觉得有必要记录一下。">
 
 
 
@@ -134,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="https://daihuanqi.github.io/tags/php/"/>
+  <link rel="canonical" href="https://daihuanqi.github.io/2017/11/12/汉明距离/"/>
 
 
 
 
 
-  <title>标签: php | Melody</title>
+  <title>汉明距离 | Melody</title>
   
 
 
@@ -169,7 +171,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -293,54 +295,253 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>php<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://daihuanqi.github.io/2017/11/12/汉明距离/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Melody">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/Melody.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Melody">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/08/19/关于PHP错误日志踩过的一些坑/" itemprop="url">
-              
-                <span itemprop="name">关于PHP错误日志踩过的一些坑</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">汉明距离</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-19T11:41:04+08:00"
-              content="2017-08-19" >
-          08-19
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-12T11:15:05+08:00">
+                2017-11-12
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/11/12/汉明距离/" class="leancloud_visitors" data-flag-title="汉明距离">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>今天看到了一道算法题，叫汉明距离（音译吧）。一开始我是懵逼的，后来复习了一下计算机的一些基础之后就做出来了，我觉得有必要记录一下。<br><a id="more"></a></p>
+<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>原题是英文版的  先贴原题先。</p>
+<p>The Hamming distance between two integers is the number of positions at which the corresponding bits are different.</p>
+<p>Given two integers x and y, calculate the Hamming distance.</p>
+<p>Note:<br>0 ≤ x, y &lt; 2<sup>31<sup>.</sup></sup></p>
+<p>Example:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">Input: x = 1, y = 4</div><div class="line"></div><div class="line">Output: 2</div><div class="line"></div><div class="line">Explanation:</div><div class="line">1   (0 0 0 1)</div><div class="line">4   (0 1 0 0)</div><div class="line">       ↑   ↑</div><div class="line"></div><div class="line">The above arrows point to positions where the corresponding bits are different.</div></pre></td></tr></table></figure></p>
+<p>我大概翻译一下吧。题目要求就是输入两个正整数，求这两个整数的汉明距离。<br>什么是汉明距离呢？ 就是两个整数转换成二进制编码后，异或运算后得出中间有多少个1。就如上面到例子。这个1的个数就是汉明距离</p>
+<h3 id="我的解题方法"><a href="#我的解题方法" class="headerlink" title="我的解题方法"></a>我的解题方法</h3><p>我的解题方法比较简单粗暴，假设x,y两个整数异或运算后得出z，z与1按位与，如果末尾是1的话，与1按位与结果肯定是1。那么，就可以对这个整数每次按位与之后右移。直到0为止。</p>
+<p>贴上代码（C++版本）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    int hammingDistance(int x, int y) &#123;</div><div class="line">        int i = 0;</div><div class="line">        int k = 0;</div><div class="line">        k = x ^ y;</div><div class="line">        while (k &gt; 0) &#123;</div><div class="line">            if ((k &amp; 1) == 1)  i++;</div><div class="line">            k = k&gt;&gt;1;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        cout&lt;&lt;i;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<h3 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h3><p>我在网上找了一下  发现还有其他更好的方法。</p>
+<p>这里是只统计1的个数，如果按照我上面那个方法，是要把所有的位考虑到。效率肯定可以提升。<br>那怎样把1一个一个取出来呢？既能统计到个数，也要不能影响到其他未统计的1。考虑这样一个规律：n和n-1相与，最低位始终为0。 </p>
+<p>Example:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">n	         0101 1000</div><div class="line">n - 1	     0101 0111</div><div class="line">n &amp; (n - 1)  0101 0000</div></pre></td></tr></table></figure></p>
+<p>这样的话，最后一个1已经全部换成0了，而其他1也没有产生影响。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    int hammingDistance(int x, int y) &#123;</div><div class="line">        int i = 0;</div><div class="line">        int n = x ^ y; </div><div class="line">        while (n != 0)  </div><div class="line">        &#123;  </div><div class="line">            n &amp;= n - 1;  </div><div class="line">            ++i;  </div><div class="line">        &#125;  </div><div class="line">        return i;  </div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>这个方法在n的大多数据位为0时，效率最高，因为只统计了一的次数。</p>
+<h3 id="引申"><a href="#引申" class="headerlink" title="引申"></a>引申</h3><p>从这道题目本身来说能引申出计算机编码、位运算等知识点。所以我又继续查了一下相关资料，发现一篇文章不错。这里引用一下：</p>
+<p>优秀程序员不得不知道的20个位运算技巧：<a href="http://blog.csdn.net/zmazon/article/details/8262185" target="_blank" rel="external">http://blog.csdn.net/zmazon/article/details/8262185</a></p>
+<h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><p>每日一题，坚持锻炼思维。不让自己思维停滞。这是我写这篇文章的意义。我会尽量做到每日一题。可以的话每天都记录一下。<br>吾日三省吾身。。。</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>捧个场？</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/weixin.jpg" alt="Melody WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/alipay.jpg" alt="Melody Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/位运算/" rel="tag"># 位运算</a>
+          
+            <a href="/tags/二进制/" rel="tag"># 二进制</a>
+          
+            <a href="/tags/算法/" rel="tag"># 算法</a>
+          
+            <a href="/tags/算法题/" rel="tag"># 算法题</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/12/计算机的位运算/" rel="next" title="计算机的位运算">
+                <i class="fa fa-chevron-left"></i> 计算机的位运算
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<a class="jiathis_button_weixin"></a>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_douban"></a>
+<a class="jiathis_button_share"></a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -348,6 +549,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDI2OC82ODIz"></div>
+    
+  </div>
+
 
         </div>
         
@@ -368,8 +575,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/Melody.jpg"
@@ -495,6 +711,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我的解题方法"><span class="nav-number">2.</span> <span class="nav-text">我的解题方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他方法"><span class="nav-number">3.</span> <span class="nav-text">其他方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引申"><span class="nav-number">4.</span> <span class="nav-text">引申</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写在最后"><span class="nav-number">5.</span> <span class="nav-text">写在最后</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -638,10 +870,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
@@ -670,6 +902,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

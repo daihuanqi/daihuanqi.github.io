@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://daihuanqi.github.io/"/>
-  <updated>2017-11-12T04:37:27.000Z</updated>
+  <updated>2017-11-12T08:49:30.000Z</updated>
   <id>https://daihuanqi.github.io/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>汉明距离</title>
+    <link href="https://daihuanqi.github.io/2017/11/12/%E6%B1%89%E6%98%8E%E8%B7%9D%E7%A6%BB/"/>
+    <id>https://daihuanqi.github.io/2017/11/12/汉明距离/</id>
+    <published>2017-11-12T03:15:05.000Z</published>
+    <updated>2017-11-12T08:49:30.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天看到了一道算法题，叫汉明距离（音译吧）。一开始我是懵逼的，后来复习了一下计算机的一些基础之后就做出来了，我觉得有必要记录一下。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="数据结构与算法" scheme="https://daihuanqi.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="位运算" scheme="https://daihuanqi.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+      <category term="二进制" scheme="https://daihuanqi.github.io/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/"/>
+    
+      <category term="算法" scheme="https://daihuanqi.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="算法题" scheme="https://daihuanqi.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>计算机的位运算</title>
