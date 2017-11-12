@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="redis,Predis,PHP,NoSQL," />
 
 
 
@@ -96,16 +96,18 @@
 
 
 
-<meta name="description" content="背上的伤痕是剑士的耻辱！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Melody">
-<meta property="og:url" content="https://daihuanqi.github.io/tags/索引/index.html">
+<meta name="description" content="过去一周我们公司的Redis一直收到报错信息。 于是乎我就上了我们线上服务器查了下错误日志。清一色都是显示Predis链接超时。">
+<meta name="keywords" content="redis,Predis,PHP,NoSQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Predis的坑">
+<meta property="og:url" content="https://daihuanqi.github.io/2017/11/12/Predis的坑/index.html">
 <meta property="og:site_name" content="Melody">
-<meta property="og:description" content="背上的伤痕是剑士的耻辱！">
+<meta property="og:description" content="过去一周我们公司的Redis一直收到报错信息。 于是乎我就上了我们线上服务器查了下错误日志。清一色都是显示Predis链接超时。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-12T09:19:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Melody">
-<meta name="twitter:description" content="背上的伤痕是剑士的耻辱！">
+<meta name="twitter:title" content="Predis的坑">
+<meta name="twitter:description" content="过去一周我们公司的Redis一直收到报错信息。 于是乎我就上了我们线上服务器查了下错误日志。清一色都是显示Predis链接超时。">
 
 
 
@@ -134,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="https://daihuanqi.github.io/tags/索引/"/>
+  <link rel="canonical" href="https://daihuanqi.github.io/2017/11/12/Predis的坑/"/>
 
 
 
 
 
-  <title>标签: 索引 | Melody</title>
+  <title>Predis的坑 | Melody</title>
   
 
 
@@ -169,7 +171,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -293,54 +295,244 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>索引<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://daihuanqi.github.io/2017/11/12/Predis的坑/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Melody">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/Melody.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Melody">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/08/19/MySQL索引原理及慢查询优化/" itemprop="url">
-              
-                <span itemprop="name">MySQL索引原理及慢查询优化</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Predis的坑</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-19T10:55:18+08:00"
-              content="2017-08-19" >
-          08-19
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-12T16:53:54+08:00">
+                2017-11-12
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/PHP/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/11/12/Predis的坑/" class="leancloud_visitors" data-flag-title="Predis的坑">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>过去一周我们公司的Redis一直收到报错信息。 于是乎我就上了我们线上服务器查了下错误日志。清一色都是显示Predis链接超时。<br><a id="more"></a><br>首先，我们现在用的是Predis，是一个纯PHP写的PHP连接Redis的一个包。不是phpredis。<br>于是我查了一下代码，发现在连接Redis的时候明明做了异常处理，为什么还会直接抛出呢？贴上代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line"></div><div class="line">try &#123;</div><div class="line"></div><div class="line">    $cache = new Client($config, $option);</div><div class="line"></div><div class="line">   &#125; catch (Exception $exception) &#123;</div><div class="line">        </div><div class="line">        ....</div><div class="line">        </div><div class="line">   &#125;</div><div class="line">        </div><div class="line">...</div></pre></td></tr></table></figure>
+<p>明明这里捕获了异常，为什么还抛出？<br>于是我本地测试了一下，追踪了一下代码，发现Predis在new对象的时候根本没有去做连接Redis的操作！！<br>即使你在代码里面显示的调用链接方法，也不会去链接。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$cache-&gt;connect();</div></pre></td></tr></table></figure></p>
+<p>那到底什么时候去链接呢？我大概看了一下Predis的源码，发现是在操作Redis命令的时候。比如：<code>get</code>,<code>set</code>等。<br>这是一个比较坑的地方。也就说如果跟我上面那样去做异常处理，连接不上Redis的时候还是会抛异常。也就是接口500。<br>所以异常处理应该是在Predis的<code>__call()</code>方法的时候去做。为什么是<code>__call()</code>方法呢？因为Predis的Redis命令操作都是调的<code>__call()</code>方法。</p>
+<p>最后，提醒一下另一个坑。  Predis连接redis是采用长连接的，也就说如果没有显示的关闭这个连接，那么这个连接就会一直存在，直到进程结束。当然这对于高并发网站来说是提高性能的一个点。需要注意的是Redis的最大连接数问题。如果连接数超过了Redis的最大连接数，那么这边就会出问题。这个需要注意一下。</p>
+<p>还有一个坑点在于Predis的注释。代码是这样的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * Closes the underlying connection and disconnects from the server.</div><div class="line"> *</div><div class="line"> * This is the same as `Client::disconnect()` as it does not actually send</div><div class="line"> * the `QUIT` command to Redis, but simply closes the connection.</div><div class="line"> */</div><div class="line">public function quit()</div><div class="line">&#123;</div><div class="line">    $this-&gt;disconnect();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>欺负我英文不好？？这就说即使我们调用了<code>quit()</code>去关闭这个链接，但是并没有实际关闭？带着这个疑惑我是做了一个测试。<br>测试过程我就不写了。我是用<code>redis</code>的<code>info</code>命令去查看连接数的。测试结果发现如果我们真的调用了关闭方法，那么这个连接是会真实退出的。并不是像注释说的那样。。。</p>
+<p>好了  今天是周末 没出去玩，写了几篇博客，也真的是好久没动手写博客了。周末愉快~~</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>捧个场？</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/weixin.jpg" alt="Melody WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/alipay.jpg" alt="Melody Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/redis/" rel="tag"># redis</a>
+          
+            <a href="/tags/Predis/" rel="tag"># Predis</a>
+          
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
+          
+            <a href="/tags/NoSQL/" rel="tag"># NoSQL</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/12/汉明距离/" rel="next" title="汉明距离">
+                <i class="fa fa-chevron-left"></i> 汉明距离
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<a class="jiathis_button_weixin"></a>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_douban"></a>
+<a class="jiathis_button_share"></a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -348,6 +540,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDI2OC82ODIz"></div>
+    
+  </div>
+
 
         </div>
         
@@ -638,10 +836,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
@@ -670,6 +868,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
