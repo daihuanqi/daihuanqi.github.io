@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="算法,位运算,二进制,算法题," />
+  <meta name="keywords" content="哈希查找,算法,C语言," />
 
 
 
@@ -96,18 +96,18 @@
 
 
 
-<meta name="description" content="今天看到了一道算法题，叫汉明距离（音译吧）。一开始我是懵逼的，后来复习了一下计算机的一些基础之后就做出来了，我觉得有必要记录一下。">
-<meta name="keywords" content="算法,位运算,二进制,算法题">
+<meta name="description" content="今天我一时兴起，打算重新看一下哈希查找算法的实现。因为平时用的太多hashTable了，如果连实现原理都不知道，实在是说不过去。废话不说，开始干货！">
+<meta name="keywords" content="哈希查找,算法,C语言">
 <meta property="og:type" content="article">
-<meta property="og:title" content="汉明距离">
-<meta property="og:url" content="https://daihuanqi.github.io/2017/11/12/汉明距离/index.html">
+<meta property="og:title" content="简单哈希查找的实现">
+<meta property="og:url" content="https://daihuanqi.github.io/2018/01/07/哈希查找的实现/index.html">
 <meta property="og:site_name" content="Melody">
-<meta property="og:description" content="今天看到了一道算法题，叫汉明距离（音译吧）。一开始我是懵逼的，后来复习了一下计算机的一些基础之后就做出来了，我觉得有必要记录一下。">
+<meta property="og:description" content="今天我一时兴起，打算重新看一下哈希查找算法的实现。因为平时用的太多hashTable了，如果连实现原理都不知道，实在是说不过去。废话不说，开始干货！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-12T08:49:30.000Z">
+<meta property="og:updated_time" content="2018-01-07T09:40:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="汉明距离">
-<meta name="twitter:description" content="今天看到了一道算法题，叫汉明距离（音译吧）。一开始我是懵逼的，后来复习了一下计算机的一些基础之后就做出来了，我觉得有必要记录一下。">
+<meta name="twitter:title" content="简单哈希查找的实现">
+<meta name="twitter:description" content="今天我一时兴起，打算重新看一下哈希查找算法的实现。因为平时用的太多hashTable了，如果连实现原理都不知道，实在是说不过去。废话不说，开始干货！">
 
 
 
@@ -136,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="https://daihuanqi.github.io/2017/11/12/汉明距离/"/>
+  <link rel="canonical" href="https://daihuanqi.github.io/2018/01/07/哈希查找的实现/"/>
 
 
 
 
 
-  <title>汉明距离 | Melody</title>
+  <title>简单哈希查找的实现 | Melody</title>
   
 
 
@@ -309,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://daihuanqi.github.io/2017/11/12/汉明距离/">
+    <link itemprop="mainEntityOfPage" href="https://daihuanqi.github.io/2018/01/07/哈希查找的实现/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Melody">
@@ -326,7 +326,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">汉明距离</h1>
+          <h1 class="post-title" itemprop="name headline">简单哈希查找的实现</h1>
         
 
         <div class="post-meta">
@@ -338,8 +338,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-12T11:15:05+08:00">
-                2017-11-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-07T16:32:54+08:00">
+                2018-01-07
               </time>
             
 
@@ -378,7 +378,7 @@
 
           
           
-             <span id="/2017/11/12/汉明距离/" class="leancloud_visitors" data-flag-title="汉明距离">
+             <span id="/2018/01/07/哈希查找的实现/" class="leancloud_visitors" data-flag-title="简单哈希查找的实现">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -409,24 +409,29 @@
       
 
       
-        <p>今天看到了一道算法题，叫汉明距离（音译吧）。一开始我是懵逼的，后来复习了一下计算机的一些基础之后就做出来了，我觉得有必要记录一下。<br><a id="more"></a></p>
-<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>原题是英文版的  先贴原题先。</p>
-<p>The Hamming distance between two integers is the number of positions at which the corresponding bits are different.</p>
-<p>Given two integers x and y, calculate the Hamming distance.</p>
-<p>Note:<br>0 ≤ x, y &lt; 2<sup>31<sup>.</sup></sup></p>
-<p>Example:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">Input: x = 1, y = 4</div><div class="line"></div><div class="line">Output: 2</div><div class="line"></div><div class="line">Explanation:</div><div class="line">1   (0 0 0 1)</div><div class="line">4   (0 1 0 0)</div><div class="line">       ↑   ↑</div><div class="line"></div><div class="line">The above arrows point to positions where the corresponding bits are different.</div></pre></td></tr></table></figure></p>
-<p>我大概翻译一下吧。题目要求就是输入两个正整数，求这两个整数的汉明距离。<br>什么是汉明距离呢？ 就是两个整数转换成二进制编码后，异或运算后得出中间有多少个1。就如上面到例子。这个1的个数就是汉明距离</p>
-<h3 id="我的解题方法"><a href="#我的解题方法" class="headerlink" title="我的解题方法"></a>我的解题方法</h3><p>我的解题方法比较简单粗暴，假设x,y两个整数异或运算后得出z，z与1按位与，如果末尾是1的话，与1按位与结果肯定是1。那么，就可以对这个整数每次按位与之后右移。直到0为止。</p>
-<p>贴上代码（C++版本）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    int hammingDistance(int x, int y) &#123;</div><div class="line">        int i = 0;</div><div class="line">        int k = 0;</div><div class="line">        k = x ^ y;</div><div class="line">        while (k &gt; 0) &#123;</div><div class="line">            if ((k &amp; 1) == 1)  i++;</div><div class="line">            k = k&gt;&gt;1;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        cout&lt;&lt;i;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
-<h3 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h3><p>我在网上找了一下  发现还有其他更好的方法。</p>
-<p>这里是只统计1的个数，如果按照我上面那个方法，是要把所有的位考虑到。效率肯定可以提升。<br>那怎样把1一个一个取出来呢？既能统计到个数，也要不能影响到其他未统计的1。考虑这样一个规律：n和n-1相与，最低位始终为0。 </p>
-<p>Example:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">n	         0101 1000</div><div class="line">n - 1	     0101 0111</div><div class="line">n &amp; (n - 1)  0101 0000</div></pre></td></tr></table></figure></p>
-<p>这样的话，最后一个1已经全部换成0了，而其他1也没有产生影响。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    int hammingDistance(int x, int y) &#123;</div><div class="line">        int i = 0;</div><div class="line">        int n = x ^ y; </div><div class="line">        while (n != 0)  </div><div class="line">        &#123;  </div><div class="line">            n &amp;= n - 1;  </div><div class="line">            ++i;  </div><div class="line">        &#125;  </div><div class="line">        return i;  </div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
-<p>这个方法在n的大多数据位为0时，效率最高，因为只统计了一的次数。</p>
-<h3 id="引申"><a href="#引申" class="headerlink" title="引申"></a>引申</h3><p>从这道题目本身来说能引申出计算机编码、位运算等知识点。所以我又继续查了一下相关资料，发现一篇文章不错。这里引用一下：</p>
-<p>优秀程序员不得不知道的20个位运算技巧：<a href="http://blog.csdn.net/zmazon/article/details/8262185" target="_blank" rel="external">http://blog.csdn.net/zmazon/article/details/8262185</a></p>
-<h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><p>每日一题，坚持锻炼思维。不让自己思维停滞。这是我写这篇文章的意义。我会尽量做到每日一题。可以的话每天都记录一下。<br>吾日三省吾身。。。</p>
-
+        <p>今天我一时兴起，打算重新看一下哈希查找算法的实现。因为平时用的太多hashTable了，如果连实现原理都不知道，实在是说不过去。<br>废话不说，开始干货！<br><a id="more"></a></p>
+<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><blockquote>
+<p>编程实现哈希查找。要求如下：已知哈希表长度为11，哈希函数为H(key) = key % 11,随机产生待散列的小于50的8个元素，<br>同时采用线性探测的方法处理哈希冲突。<br>任意输入要查找的内容，无论是否找到均给出提示信息。</p>
+</blockquote>
+<p>以下是用C代码的实现：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div></pre></td><td class="code"><pre><div class="line">#include &lt;stdio.h&gt;</div><div class="line">#include &lt;time.h&gt;</div><div class="line">#include &lt;stdlib.h&gt;</div><div class="line">#define MAX 11</div><div class="line">#define N 8</div><div class="line">int hashtable[MAX];</div><div class="line"></div><div class="line">// 自定义函数，返回哈希函数的值。这里实现的是H(key) = key % MAX   </div><div class="line">// 返回H(key)</div><div class="line">int func(int value)</div><div class="line">&#123;</div><div class="line">	return value % MAX;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">// 自定义函数search() 实现哈希查找。 代码如下</div><div class="line">// key是要查找的关键字，返回查到的位置</div><div class="line">int search(int key) </div><div class="line">&#123;</div><div class="line">	int pos,t;         </div><div class="line">	pos = func(key);   // 哈希函数确定位置</div><div class="line">	t = pos;           // t存放确定出的位置</div><div class="line"></div><div class="line">	// 如果该位置不等于要查找的关键字</div><div class="line">	while(hashtable[t] != key &amp;&amp; hashtable[t] != -1)</div><div class="line">	&#123;</div><div class="line">		t = (t + 1) % MAX;  // 利用线性探测求出下一个位置</div><div class="line">   </div><div class="line">		if (pos == t)</div><div class="line">		&#123;</div><div class="line">			// 如果经过多次探测又回到原来用哈希函数求出的位置，则说明要查找的数不存在</div><div class="line">			return -1;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	if (hashtable[t] == -1)</div><div class="line">	&#123;</div><div class="line">		return -1;</div><div class="line">	&#125; else &#123;</div><div class="line">		return t;</div><div class="line">	&#125;</div><div class="line"></div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">// 自定义函数 createhash() 实现哈希表的创建。</div><div class="line">void createhash(int key)</div><div class="line">&#123;</div><div class="line">	int pos,t;</div><div class="line">	pos = func(key);   // 用哈希函数确定元素的位置</div><div class="line">	t = pos;</div><div class="line"></div><div class="line">	while(hashtable[t] != -1)</div><div class="line">	&#123;</div><div class="line">		t = (t + 1) % MAX;</div><div class="line">		</div><div class="line">		// 如果冲突处理后确定的位置与原位置相同，则说明哈希表已满</div><div class="line">		if (pos == t) &#123;</div><div class="line">			printf(&quot;哈希表已经满了\n&quot;);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	hashtable[t] = key;</div><div class="line"></div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">//  main() 函数作为程序的入口函数</div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">	int flag[50];   // 定义标记变量</div><div class="line">	int i,j,t;</div><div class="line">	</div><div class="line">	// 在哈希表中 初始位置的值都是-1</div><div class="line">	for (i = 0; i &lt; MAX; i++)</div><div class="line">	&#123;</div><div class="line">		</div><div class="line">		hashtable[i] = -1;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	// 50以内的所有数未产生时，均标志为0</div><div class="line">	for (i = 0; i &lt; 50; i++)</div><div class="line">	&#123;</div><div class="line">		flag[i] = 0;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	// 利用系统时间做种子产生随机数</div><div class="line">	srand((unsigned long) time(0));</div><div class="line"></div><div class="line">	i = 0;</div><div class="line">	while(i != N) </div><div class="line">	&#123;</div><div class="line">		// 产生一个50以内的随机数赋给t</div><div class="line">		t = rand() % 50;</div><div class="line"></div><div class="line">		if (flag[t] == 0)</div><div class="line">		&#123;</div><div class="line">			// 调用哈希创建函数创建哈希表</div><div class="line">			createhash(t);</div><div class="line">			// 输出元素</div><div class="line">			printf(&quot;%2d 哈希表内容如下：&quot;, t);</div><div class="line"></div><div class="line">			// 输出哈希表内容</div><div class="line">			for (j = 0; j &lt; MAX; j++)</div><div class="line">			&#123;</div><div class="line">				printf(&quot; %2d &quot;, hashtable[j]);</div><div class="line">			&#125;</div><div class="line">			printf(&quot;\n&quot;);</div><div class="line">			</div><div class="line">			// 标记</div><div class="line">			flag[t] = 1;</div><div class="line">			i++;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line"></div><div class="line">	printf(&quot;请输入你想查找的元素：&quot;);</div><div class="line">	scanf(&quot;%d&quot;,&amp;t);</div><div class="line"></div><div class="line">	if (t &gt; 0 &amp;&amp; t &lt; 50)&#123;</div><div class="line">	  	i = search(t);</div><div class="line">	  	if (i != -1)&#123;</div><div class="line">	  		printf(&quot;查找成功！其位置是：%d\n&quot;,i);</div><div class="line">	  	&#125; else &#123;</div><div class="line">	  		printf(&quot;查找失败\n&quot;);</div><div class="line">	  	&#125;</div><div class="line">	&#125; else &#123;</div><div class="line">		printf(&quot;输入有误！&quot;);</div><div class="line">	&#125; </div><div class="line"></div><div class="line"></div><div class="line">	return 0; </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>代码运行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">34 哈希表内容如下： -1  34  -1  -1  -1  -1  -1  -1  -1  -1  -1</div><div class="line">46 哈希表内容如下： -1  34  46  -1  -1  -1  -1  -1  -1  -1  -1</div><div class="line"> 2 哈希表内容如下： -1  34  46   2  -1  -1  -1  -1  -1  -1  -1</div><div class="line">33 哈希表内容如下： 33  34  46   2  -1  -1  -1  -1  -1  -1  -1</div><div class="line">25 哈希表内容如下： 33  34  46   2  25  -1  -1  -1  -1  -1  -1</div><div class="line">17 哈希表内容如下： 33  34  46   2  25  -1  17  -1  -1  -1  -1</div><div class="line">19 哈希表内容如下： 33  34  46   2  25  -1  17  -1  19  -1  -1</div><div class="line">32 哈希表内容如下： 33  34  46   2  25  -1  17  -1  19  -1  32</div><div class="line">请输入你想查找的元素：32</div><div class="line">查找成功！其位置是：10</div></pre></td></tr></table></figure></p>
+<h3 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h3><p>哈希函数的构造方法常用的有5中，分别是</p>
+<ul>
+<li>数字分析法</li>
+<li>平方取中法</li>
+<li>分段叠加</li>
+<li>伪随机数法和余数法</li>
+</ul>
+<p>其中余数法比较常用。因为本例实现中已经给出哈希函数所以不必要构造，直接按照题中给的哈希函数来运算即可。<br>虽然通过构造好的哈希函数可以减少冲突，但是冲突是不可避免的，所以就相应的产生了避免哈希冲突的常用4中方法。分别是：</p>
+<ul>
+<li>开放地址（包括线性探测再散列和二次探测再散列）</li>
+<li>链地址法</li>
+<li>再哈希法</li>
+<li>建立公共溢出区</li>
+</ul>
+<p>开放地址中的线性探测再散列比较常用，该方法的特点是在冲突发生时，顺序查看表中的下一单元，直到找出一个空单元或查遍全表。</p>
+<h3 id="后话"><a href="#后话" class="headerlink" title="后话"></a>后话</h3><p>这个例子只是简单的hash查找的实现，但是原理在其中。通过这个例子可以好好理解哈希实现的原理，让我们在用hashTable的时候，起码知道一些原理。比如我们PHP强大的关联数组。本质上就是一个hashTable。</p>
+<h3 id="下次博客是啥时候呢？"><a href="#下次博客是啥时候呢？" class="headerlink" title="下次博客是啥时候呢？  = ="></a>下次博客是啥时候呢？  = =</h3>
       
     </div>
     
@@ -472,13 +477,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/哈希查找/" rel="tag"># 哈希查找</a>
+          
             <a href="/tags/算法/" rel="tag"># 算法</a>
           
-            <a href="/tags/位运算/" rel="tag"># 位运算</a>
-          
-            <a href="/tags/二进制/" rel="tag"># 二进制</a>
-          
-            <a href="/tags/算法题/" rel="tag"># 算法题</a>
+            <a href="/tags/C语言/" rel="tag"># C语言</a>
           
         </div>
       
@@ -491,8 +494,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/19/php单一入口和多入口模式详细讲解/" rel="next" title="php单一入口和多入口模式详细讲解">
-                <i class="fa fa-chevron-left"></i> php单一入口和多入口模式详细讲解
+              <a href="/2017/11/12/Predis的坑/" rel="next" title="Predis的坑">
+                <i class="fa fa-chevron-left"></i> Predis的坑
               </a>
             
           </div>
@@ -500,10 +503,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/12/计算机的位运算/" rel="prev" title="计算机的位运算">
-                计算机的位运算 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -725,7 +724,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我的解题方法"><span class="nav-number">2.</span> <span class="nav-text">我的解题方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他方法"><span class="nav-number">3.</span> <span class="nav-text">其他方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引申"><span class="nav-number">4.</span> <span class="nav-text">引申</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写在最后"><span class="nav-number">5.</span> <span class="nav-text">写在最后</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#要点"><span class="nav-number">2.</span> <span class="nav-text">要点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后话"><span class="nav-number">3.</span> <span class="nav-text">后话</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下次博客是啥时候呢？"><span class="nav-number">4.</span> <span class="nav-text">下次博客是啥时候呢？  = =</span></a></li></ol></div>
             
 
           </div>
