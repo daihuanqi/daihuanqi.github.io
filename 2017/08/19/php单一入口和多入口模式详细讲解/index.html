@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Melody">
 <meta property="og:description" content="原文出处：http://www.smsyun.com/home-index-page-id-220.html php单一入口模式可谓是现在一种比较流行的大型web应用开发模式，比如当前比较流行的一些php开发框架，zend，thinkphp，qeephp，还有cakephp 等他们都是采用的单一入口模式的。本文将就什么是单一入口模式，单一入口模式有哪些优点以缺点做一下研究。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-19T03:59:56.000Z">
+<meta property="og:updated_time" content="2018-01-11T15:10:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="php单一入口和多入口模式详细讲解">
 <meta name="twitter:description" content="原文出处：http://www.smsyun.com/home-index-page-id-220.html php单一入口模式可谓是现在一种比较流行的大型web应用开发模式，比如当前比较流行的一些php开发框架，zend，thinkphp，qeephp，还有cakephp 等他们都是采用的单一入口模式的。本文将就什么是单一入口模式，单一入口模式有哪些优点以缺点做一下研究。">
@@ -419,7 +419,7 @@
 <p>对于这个项目来说，这其实就是一个多入口。</p>
 <p>那么单一入口的应用程序就是说用一个文件处理所有的HTTP请求，例如不管是内容列表页，用户登录页还是内容详细页，都是通过从浏览器访问 index.php 文件来进行处理的，这里这个 index.php 文件就是这个应用程序的单一入口。</p>
 <h5 id="php-是如何实现单一入口的呢？"><a href="#php-是如何实现单一入口的呢？" class="headerlink" title="php 是如何实现单一入口的呢？"></a>php 是如何实现单一入口的呢？</h5><p>很简单，一般单一入口程序都是在访问<code>index.php</code>时附带一个特定的参数。例如：<code>index.php?action=list</code>就可以定义为访问内容列表页，而<code>index.php?action=info</code> 则可以定义为访问内容详细页等，具体实现代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$action=$_GET[&apos;action&apos;]==&apos;&apos;?&apos;index&apos;:$_GET[&apos;action&apos;];//从url中取出action参数，如果没有提供action参数，就设置一个默认的&apos;index&apos;作为参数</div><div class="line">include(&apos;files/&apos;.$action.&apos;.php&apos;);//根据$action参数调用不同的代码文件，从而满足单一入口实现对应的不同的功能</div></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$action=$_GET[<span class="string">'action'</span>]==<span class="string">''</span>?<span class="string">'index'</span>:$_GET[<span class="string">'action'</span>];<span class="comment">//从url中取出action参数，如果没有提供action参数，就设置一个默认的'index'作为参数</span></div><div class="line"><span class="keyword">include</span>(<span class="string">'files/'</span>.$action.<span class="string">'.php'</span>);<span class="comment">//根据$action参数调用不同的代码文件，从而满足单一入口实现对应的不同的功能</span></div></pre></td></tr></table></figure>
 <p>以上这个就实现了一个最简单的单一入口模式程序，当然真正的单一入口模式会比这个要复杂很多。但只要懂得如何合理组织各个功能的处理代码并遵循一定的步骤，也可以轻松的解决掉这个难题，下面就一个后台的例子来做一下说明：</p>
 <p>比如我们现在要做一个新闻管理的后台。那么首先，对于应用程序的功能要做出一个合理的分解。例如后台的新闻栏目可能包含“添加新闻”、“编辑新闻”、“删除新闻”等多个功能。这时我们就可以将这一组逻辑上关联的功能组合到一个功能模块中，称为“新闻管理”模块。<br>按照上面的方法整理完应用程序的功能，我们就会得到多个功能模块，而每个模块又是由多个功能组成（实际上，即便不是单一入口应用程序，功能的整理也是必须的步骤）。</p>
 <p>整理完功能后，我们就需要确定如何存放各个功能的代码。这里我推荐两种方式：</p>
