@@ -31,7 +31,7 @@ php单一入口模式可谓是现在一种比较流行的大型web应用开发�
 
 很简单，一般单一入口程序都是在访问`index.php`时附带一个特定的参数。例如：`index.php?action=list `就可以定义为访问内容列表页，而` index.php?action=info` 则可以定义为访问内容详细页等，具体实现代码如下：
 
-```
+```PHP
 $action=$_GET['action']==''?'index':$_GET['action'];//从url中取出action参数，如果没有提供action参数，就设置一个默认的'index'作为参数
 include('files/'.$action.'.php');//根据$action参数调用不同的代码文件，从而满足单一入口实现对应的不同的功能
 ```
